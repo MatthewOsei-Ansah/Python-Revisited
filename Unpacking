@@ -1,0 +1,21 @@
+# Unpacking
+a, b = (5, 20) # Assigns a 5 and b 20
+print(a)
+print(b)
+
+a, b, c = (1.5, 100, "Hello")
+print(a)
+print(b)
+print(c)
+# You can use [] or no brackets at all; it will still work as normal
+
+# Real life example
+energy, health, weapon = 100, 50, "Sword"
+print(weapon)
+
+# Swapping variable
+value_1 = 10
+value_2 = "test"
+value_1, value_2 = value_2, value_1
+print(value_1)
+print(value_2)
