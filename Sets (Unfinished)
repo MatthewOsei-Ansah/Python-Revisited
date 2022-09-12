@@ -1,0 +1,24 @@
+# Sets are essentially dictionaries without keys
+# Any duplicates are deleted
+# Indexing and slicing do not work
+
+# Duplicates are deleted
+my_set = {1, 2, 3, 4, 4}
+print(my_set)
+
+# Length can be checked as with any other container on python
+#print(len(my_set))
+
+# Methods
+#my_set.add(5)
+my_set.remove(4)
+
+# Closest you can come picking and taking out items in a set
+# Removes the first item in the set
+#print(my_set.pop())
+#print(my_set)
+
+# Exercise use type conversion to get one item from the set by index
+x = str(my_set)
+x.strip('{').strip('}')
+print(x[0])
