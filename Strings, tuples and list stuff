@@ -1,0 +1,24 @@
+test_string = "this is a test"
+test_list = [1,2,3,4]
+
+# Turning a string into a list or tuple
+
+test_string.split() # Splits the string into a list seperating it at each space
+
+test_string.split('t') # Splits the string where ever there is a t
+
+list(test_string) # Turn each character into an individual element and creates a list with it
+
+tuple(test_string) # Does the same as the list method but creates a tuple instead
+
+print(''.join(['one','two'])) # Joins the 2 arguments then outputs the result, the first '' dictates what goes in between each arguement when conjoined. All values have to be a string 
+
+print(' '.join(['one','two','three','four','five'])) # Added a space between each arguement
+
+print(' '.join(str(test_list))) # Converts the list into a string in order for it to be conjoined
+(test_string[0] # Calls the first value of the variable, in this case t
+
+ # Exercise print out test list joined with out the commas or square brackets
+
+exercise = str(test_list).strip('[').strip(']').replace(',','') # Honestly I don't know why it keeps saying incorrect syntax this is correct but ok. Pretty self-explanatory code
+print(exercise)
