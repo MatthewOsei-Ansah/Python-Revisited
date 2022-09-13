@@ -1,0 +1,35 @@
+"""
+Variables within a class are called attributes and functions are called methods
+You can have multiple objects in the same class each with unique attributes
+A class is a blueprint for an object
+Meaning whenever we want to create an object we first need to create a class
+"""
+
+"""
+A class can also inherit from another class 
+The resulting objects will have attribute and methods from both classes 
+"""
+
+"""
+Why use classes and objects
+1. They organise complex code
+2. They help to create reusable code
+3. They ae used everywhere i.e. if you don't understand them then your in trouble
+4.Some modules require you to use classes. For example Pi Game, HT, tkinter and MATLAB
+5. They will make it easier to work with scope
+"""
+
+
+class Monster:
+    # Attributes
+    health = 90
+    energy = 40
+
+    # Methods
+    def attack(self):
+        print("The monster has attacked!")
+
+monster = Monster()
+monster.attack()
+print(monster.health)
+print(monster.energy)
