@@ -1,0 +1,67 @@
+# Inheritance is when a class gets attributes and methods from another class
+# A class can inherit from an unlimited number of other classes
+# A parent class can also be inherited from an unlimited amount of other classes
+# Inheritance can get very complex
+# However most of the time basic inheritance is all that is needed
+
+# Parent Class
+"""
+To make the inheritance more simple set the health and energy without the self and
+remove health and energy from the dunder init method
+"""
+
+
+class Monster:
+    def __init__(self, health, energy):
+        self.health = health
+        self.energy = energy
+
+    # Methods
+    def attack(self, amount):
+        print('The monster has attacked')
+        print(f'{amount} damage was dealt')
+        self.energy -= 20
+
+    def move(self, distance):
+        print('The monster has moved')
+        print(f'It has moved a distance of {distance}')
+
+
+# Child Class
+
+class Shark(Monster):
+    def __init__(self, distance, health, energy):
+        super().__init__(health, energy)  # The attributes that you are inheriting from the parent class
+        super().move(10)  # You can also call methods from the parent class using super
+        self.distance = distance
+
+    def bite(self):
+        print('The shark has bitten')
+
+    def move(self):
+        print(f'The shark has moved a distance of {self.distance} units')
+
+
+"""
+The old method of inheritance would be to reference the class then add .__init__ at the end
+You would then fill the parameter with all the attributes you would be using 
+For example here you would use Monster.__init__(health, energy)
+"""
+
+"""
+Exercise
+Create a scorpion class that inherits from the monster class
+It should inherit health and energy from the parent 
+Create a poison_damage attribute 
+Override the damage method to show damage
+"""
+
+
+class Scorpion(Monster):
+    def __init__(self, poison_damage,scorpion_health, scorpion_energy):
+        super().__init__(scorpion_health, scorpion_energy)
+        self.poison_damage = poison_damage
+
+    def attack(self):
+        print('The scorpion has stung')
+        print(f'{self.poison_damage} of poison damage has been inflicted')
