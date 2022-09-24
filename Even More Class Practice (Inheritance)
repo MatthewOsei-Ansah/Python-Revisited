@@ -1,0 +1,33 @@
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def stats(self):
+        print(f'Make: {self.make}')
+        print(f'Model: {self.model}')
+        print(f'Year: {self.year}')
+
+
+class Dealership(Vehicle):
+    def __init__(self, make, model, year, price, mileage):
+        super().__init__(make, model, year)
+        self.price = price
+        self.mileage = mileage
+
+    def listing(self):
+        print(f'{self.make} {self.model} {self.year}')
+        print(f'Mileage: {self.mileage}')
+        print(f'£{self.price}')
+
+
+Car1 = Vehicle('Volvo', 'XC90', 2020)
+Car1.stats()
+
+Car2 = Vehicle('Lamborghini', 'Aventador', 2012)
+Car2.stats()
+
+Car3 = Dealership('Koenigsegg', 'Regara', 2020, 2400000, 5000)
+Car3.listing()
+Car3.stats()
