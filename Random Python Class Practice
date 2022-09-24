@@ -1,0 +1,24 @@
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity}"
+
+
+class Bus(Vehicle):
+    def __init__(self, name, max_speed, mileage):
+        super().__init__(name, max_speed, mileage)
+
+    capacity = 50
+
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity}"
+
+
+bus = Bus("School Volvo", 180, 12)
+
+print(bus.name)
+print(bus.seating_capacity(50))
